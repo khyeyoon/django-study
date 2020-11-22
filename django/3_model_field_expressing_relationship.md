@@ -4,10 +4,10 @@
 
 * 1:N 관계에서 N 측에 명시
 
-'''
+```
 # to : 대상모델(1측) , on_delete : record(대상모델) 삭제 시 rule 
 ForeignKey(to, on_delete)
-'''
+```
 
 > limit_choices_to 옵션을 통해 선택항목 제한이 가능
 
@@ -23,9 +23,9 @@ ForeignKey(to, on_delete)
 
 * 1:1 관계에서 사용하며, 어느 쪽에서 지정해도 무관
 
-'''
+```
 OneToOneField(to, on_delete)
-'''
+```
 
 * reverse 접근 시 속성명
 
@@ -35,9 +35,9 @@ OneToOneField(to, on_delete)
 
 * M:N 관계에서 어느 쪽이라도 필드 지정 가능
 
-'''
+```
 ManyToManyField(to, blank=False)
-'''
+```
 
 
 
