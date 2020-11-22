@@ -2,11 +2,11 @@
 
 * 아나콘다로 가상환경 구축하기
 
-'''python
+```python
 
 conda create --name (가상환경 명) python=(원하는 파이썬 버전)
 
-'''
+```
 
 * 가상환경 들어가기
 
