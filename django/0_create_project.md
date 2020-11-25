@@ -38,6 +38,57 @@ python manage.py runserver
 
 > 위의 명령어를 실행시키면 서버(http://localhost:8000/admin/)에 접속할 수 있음
 
+## django application 생성하기
+
+1. application 생성
+
+```
+python manage.py starapp (application 명)
+```
+
+2. (application 명)/urls.py 파일 생성
+
+3. 프로젝트/urls.py에 include 적용
+
+```
+# 프로젝트/urls.py
+
+from django.urls import include, path
+from django.urls import admin
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('(application 명)/', include('(application 명).urls')),
+]
+```
+
+4. 프로젝트/settings.py의 INSTALLED_APPS에 application 명 등록
+
+```
+# 프로젝트/settings.py
+
+INSTALLED_APPS = [
+    # django apps
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    # third apps
+    'django_extensions',
+    'debug_toolbar',
+    # locals apps
+    'accounts',
+    'blog1',
+    'instagram',
+    'application 명',
+]
+```
+
+
+
+
 
 
 

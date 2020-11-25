@@ -40,7 +40,7 @@ python manage.py migrate (application 명) (migration 명)
 
 > migration 명이 현재 적용된 migration 보다 이 전이라면, 역방향으로 지정 migration까지 backward 수행 (롤백)
 
-# 필수필드에 대한 makemigrations
+## 필수필드에 대한 makemigrations
 
 * 필수필드 : blank와 null 옵션이 모두 False인 필드
 

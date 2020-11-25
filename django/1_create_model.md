@@ -123,7 +123,7 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 ```
 
-# django project 설정이 되어있는 python shell 실행하기
+## django project 설정이 되어있는 python shell 실행하기
 
 ```
 python manage.py shell
