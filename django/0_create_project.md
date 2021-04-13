@@ -1,4 +1,4 @@
-# conda에서 django 시작하기 (django 개발을 위한 개발환경 구축)
+# conda에서 django 시작하기 (django 개발을 위한 가상환경 구축)
 
 * 아나콘다로 가상환경 구축하기
 
