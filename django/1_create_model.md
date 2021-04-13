@@ -35,19 +35,19 @@ python manage.py makemigrations (application명)
 python manage.py migrate (application명)
 ```
 
-* migration 적용내역 확인하기 
+    * migration 적용내역 확인하기 
 
-```
-# 전체 application 적용내역을 확인하려면 applicataion 명을 지우고 명령어 실행
+    ```
+    # 전체 application 적용내역을 확인하려면 applicataion 명을 지우고 명령어 실행
 
-python manage.py showmigrations (application명)
-```
+    python manage.py showmigrations (application명)
+    ```
 
-```
-# 데이터베이스에 들어가는 query 확인
+    ```
+    # 데이터베이스에 들어가는 query 확인
 
-python manage.py sqlmigrate (application 명) (migrations에 생성된 파일명)
-```
+    python manage.py sqlmigrate (application 명) (migrations에 생성된 파일명)
+    ```
 
 
 4. database 변경사항 확인하기
