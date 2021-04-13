@@ -1,5 +1,7 @@
 # django model 생성하기
 
+* 데이터베이스 테이블과 파이썬 클래스를 1:1 mapping
+
 1. (application명)/models.py에 class 정의하기
 
 2. migration 파일 생성하기
