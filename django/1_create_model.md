@@ -16,13 +16,16 @@
 2. model 활용
 ```
 
+
 1. (application명)/models.py에 class 정의하기
+ 
 
 2. migration 파일 생성하기
 
 ```
 python manage.py makemigrations (application명)
 ```
+
 
 3. migration 파일 적용시키기
 
@@ -37,11 +40,13 @@ python manage.py migrate (application명)
 python manage.py showmigrations (application명)
 ```
 
+
 4. database 변경사항 확인하기
 
 ```
 python manage.py dbshell
 ```
+
 
 5. 정의한 class를 admin에 등록하기
 
