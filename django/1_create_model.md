@@ -35,6 +35,7 @@ python manage.py makemigrations (application명)
 python manage.py migrate (application명)
 ```
 
+
     * migration 적용내역 확인하기 
 
     ```
@@ -42,6 +43,7 @@ python manage.py migrate (application명)
 
     python manage.py showmigrations (application명)
     ```
+
 
     ```
     # 데이터베이스에 들어가는 query 확인
