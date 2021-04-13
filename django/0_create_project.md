@@ -49,6 +49,8 @@ python manage.py runserver
 
 ## django application 생성하기
 
+* 재사용성을 목적으로 한 파이썬 패키지
+
 1. application 생성
 
 ```
