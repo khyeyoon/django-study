@@ -19,7 +19,7 @@
 
 1. (application명)/models.py에 class 정의하기
  
->
+
 
 2. migration 파일 생성하기
 
@@ -27,7 +27,6 @@
 python manage.py makemigrations (application명)
 ```
 
->
 
 3. migration 파일 적용시키기
 
