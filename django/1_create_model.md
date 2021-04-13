@@ -2,6 +2,20 @@
 
 * 데이터베이스 테이블과 파이썬 클래스를 1:1 mapping
 
+```
+# django model을 통해, 데이터베이스 형상을 관리
+1. model class 작성
+2. model class로부터 마이그레이션 파일 생성 (makemigrations)
+3. 마이그레이션 파일을 데이터베이스에 적용 (migrate)
+4. model 활용
+```
+
+```
+# django 외부에서, 데이터베이스 형상을 관리
+1. 데이터베이스로부터 model class 소스 생성 (inspectdb)
+2. model 활용
+```
+
 1. (application명)/models.py에 class 정의하기
 
 2. migration 파일 생성하기
