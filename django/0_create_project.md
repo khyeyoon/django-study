@@ -14,6 +14,12 @@ conda create --name (가상환경 명) python=(원하는 파이썬 버전)
 conda activate (가상환경 명)
 ```
 
+* conda에 설치된 가상환경 확인하기
+
+```
+conda env list
+```
+
 # django project 생성하기
 
 * project 생성 명령어
