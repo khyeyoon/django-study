@@ -1,4 +1,22 @@
-# 관계를 표현하는 모델 필드
+# django model field
+
+ ```
+ Primary Key : AutoField, BigAutoField
+ 문자열(str) : CharField, TextField, SlugField
+ 날짜/시간 : DateField, TimeField, DateTimeField, DurationField
+ 참/거짓 : BooleanField, NullBooleanField
+ 숫자 : IntegerField, SmallIntegerField, PositiveIntegerField, PositiveSmallIntegerField, BigIntegerField, DecimalField, FloatField
+ 파일 : BinaryField, FileField, ImageField, FilePathField
+ ```
+
+```
+e-mail : EmailField
+URL : URLField
+UUID : UUIDField
+IP : GenericIPAddressField
+```
+
+## 관계를 표현하는 모델 필드
 
 1. ForeignKey
 
