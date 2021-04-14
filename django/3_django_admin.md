@@ -11,3 +11,33 @@ django.contrib.admin 앱을 통해 제공
 
 내부적으로 Django Form을 적극적으로 사용
 
+### model class를 admin에 등록
+
+```
+# 첫번째 방법 : 기본 ModelAdmin으로 동작
+from django.contrib import admin
+from .models import Item
+
+admin.site.register(Item)
+```
+
+```
+# 두번째 방법 : 지정한 ModelAdmin으로 동작
+from django.contrib import admin
+from .models import Item
+
+class ItemAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(Item, ItemAdmin)
+```
+
+```
+# 세번째 방법 : wrapping 
+from django.contrib import admin
+from .models import Item
+
+@admin.register(Item)
+class ItemAdmin(admin.ModelAdmin):
+    pass
+```
