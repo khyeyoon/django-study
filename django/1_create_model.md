@@ -175,10 +175,10 @@ photo = models.ImageField(blank=True, upload_to='instagram/post/%Y/%m/%d')
 ```
 
 > blank : 업로드 옵션처리 여부 (dafault : False)
-
+>
 > upload_to : 파일 저장시 저장경로를 계산하여 settings.MEDIA-ROOT 하위에서 저장한 파일명/경로명 결정 
-
-> default : 파일명 그대로 settings.MEDIA_ROOT에 저장
+>
+> (default : 파일명 그대로 settings.MEDIA_ROOT에 저장)
 
 3. 개발환경에서의 media 파일 서빙
 
