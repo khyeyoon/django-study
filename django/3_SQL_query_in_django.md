@@ -55,7 +55,7 @@ qs=cls.objects.all().order_by('...')
 ```
 from (application 명).models import cls
 
-# OFFSET:start, LIMIT:stop-start (음수 인덱스 슬라이싱은 지원하지 않음)
+# OFFSET:start, LIMIT:stop-start (음수 인덱스 슬라이싱은 지원하지 않음) / step이 적용되면 반환값이 list로 변경됨
 qs=cls.objects.all()[start:stop:step]
 ```
 
