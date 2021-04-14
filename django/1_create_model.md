@@ -149,6 +149,15 @@ class ItemAdmin(admin.ModelAdmin):
 
 ## django로 media 파일 다루기 : 사진 업로드
 
+* Media 파일 처리 순서
+
+```
+1. HttpRequest.FILES를 통해 파일 전달
+2. 뷰 로직이나 폼 로직을 통해, 유효성 검증을 수행
+3. FileField/ImageField 필드에 "경로(문자열)"를 저장
+4. setting.MEDIA_ROOT 경로에 파일 저장
+```
+
 1. settings.py 파일을 통해 경로를 설정
 
 ```
