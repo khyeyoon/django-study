@@ -18,7 +18,7 @@ IP : GenericIPAddressField
 
 > 이외, 다양한 커스텀 필드 : https://django-model-utils.readthedocs.io/en/latest/index.html
 
-## 관계를 표현하는 모델 필드
+* 관계를 표현하는 모델 필드
 
 1. ForeignKey
 
