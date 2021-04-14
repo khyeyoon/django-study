@@ -78,6 +78,21 @@ CharField/SlugField/URLField/EmailField -> str (dafault로 적용되는 django �
 
 * 같은 모델필드라도 DB에 따라 다른 타입이 될 수 있음
 
+## field option
+
+```
+blank : django 단에서 validation시에 empty 허용 여부 (default:False)
+null (DB option) : null 허용 여부 (default:False)
+db_index (DB option) : index field 여부 (default:False)
+default : default 값 지정, 혹은 값을 리턴해줄 함수 지정 (사용자에게 dafault 값을 제공하고자 할 때 사용)
+unique (DB option) : 현재 테이블 내에서 유일성 여부 (default:False)
+choices : select 박스 소스로 사용
+validators : validators를 수행할 함수를 다수 지정 
+verbose_name : field label, 미지정시 field 명 사용
+help_text : field 입력 도움말
+```
+
+
 
 
 
