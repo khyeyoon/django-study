@@ -16,6 +16,8 @@ UUID : UUIDField
 IP : GenericIPAddressField
 ```
 
+> 이외, 다양한 커스텀 필드 : https://django-model-utils.readthedocs.io/en/latest/index.html
+
 ## 관계를 표현하는 모델 필드
 
 1. ForeignKey
@@ -57,6 +59,24 @@ OneToOneField(to, on_delete)
 ManyToManyField(to, blank=False)
 ```
 
+## model field들은 DB field type을 반영
+
+* DB에서 지원하는 필드들을 반영
+
+```
+Varchar field type -> CharField, SlugField, URLField, EmailField
+```
+
+* python data type과 DB data type을 mapping
+
+```
+AutoField -> int
+BinaryField -> bytes
+BooleanField -> bool
+CharField/SlugField/URLField/EmailField -> str (dafault로 적용되는 django 단의 유효성 검사 등의 차이)
+```
+
+* 같은 모델필드라도 DB에 따라 다른 타입이 될 수 있음
 
 
 
