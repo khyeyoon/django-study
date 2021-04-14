@@ -1,6 +1,6 @@
 # django model 생성하기
 
-* 데이터베이스 테이블과 파이썬 클래스를 1:1 mapping
+* DB table과 python class를 1:1 mapping
 
 ```
 # django model을 통해, 데이터베이스 형상을 관리
