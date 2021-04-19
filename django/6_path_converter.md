@@ -43,6 +43,7 @@ HTTP 요청이 들어올 때마다 등록된 urlpatterns 상의 mapping list를 
 
 * 다양한 정규 표현식 패턴 예시
 
+```
 1. 1자리 숫자 -> [0123456789] or [0-9] or r"[\d]" or r"\d"
 
 2. 2자리 숫자 -> [0123456789][0123456789] or [0-9][0-9] or r"\d\d"
@@ -56,6 +57,7 @@ HTTP 요청이 들어올 때마다 등록된 urlpatterns 상의 mapping list를 
 6. 알파벳 소문자 1글자 -> [abcdegghijklmnopqrstuvwxyz] or [a-z]
 
 7. 알파벳 대문자 1글자 -> [ABCDEFGHIJKLMNOPQRSTUVWXYZ] or [A-Z]
+```
 
 * 반복횟수 지정 문법
 
