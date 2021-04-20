@@ -1,73 +1,3 @@
-# Class Based View : CBV
-
-View 함수를 만들어주는 클래스
-
-> as_view() 클래스 함수를 통해 View 함수를 생성하고 상속을 통해 여러 기능을 담을 수 있음
-
-> django 기본 CBV package : django.views.generic
-
-## FBV : Function Based View
-
-```
-from django.shortcuts import get_object_or_404, render
-
-# 아래 코드가 동작하려면 urlpatterns에 path를 추가해주어야 함
-def post_detail(request, id):
-    post = get_object_or_404(Post, id=id)
-    return render(request, '(application 명)/post_detail.html', {
-        'post' : post,
-    })
-```
-
-## 함수를 통해, 동일한 View 함수 생성
-
-```
-def generate_view_fn(model):
-    # generate_view_fn 함수가 호출될 때 마다 새롭게 함수가 정의되고 그것을 반환함
-    def view_fn(request, id):
-        instance = get_object_or_404(model, id=id)
-        instance_name = model._meta.model_name
-        template_name = '{}/{}_detail.html'.format(model._meta.app_label, instance_name)
-        return render(request, template_name, {
-            instance_name : instance,
-        })
-    return view_fn
-
-post_detail = generate_view_fn(Post)
-```
-## Class로 동일한 View 함수 구현
-
-```
-class DetailView:
-    def __init__(self, model):
-        self.model = model
-
-    def get_object(self, *args, **kwargs['id'])
-        return get_object_or_404(self.model, id=kwangs['id'])
-
-    def get_template_name(self):
-        return '{}/{}_detail.html'.format(
-            self.model._meta.app_label,
-            self.model._meta.model_name
-            )
-
-    def dispatch(self, request, *args, **kwargs):
-        object = self.get_object(*args, **kwargs)
-        return render(request, self.get_template_name(), {
-            self.model._meta.model_name: objects,
-        })
-
-    @classmethod
-    def as_view(request, *args, **kwargs):
-        self = cls(model)
-        return self.dispatch(request, *args, **kwargs)
-    return view
-
-post_detail = DetailView.as_view(Post)
-```
-
-* * *
-
 ## django 기본 제공 CBV 활용
 
 ```
@@ -185,7 +115,7 @@ class View:
         return [m.upper() for m in self.http_method_names if hasattr(self, m)]
 ```
 
-2. TemplateView
+2. TemplateView : TemplateResponseMixin, ContextMixin, View을 상속 받음
 
 ```
 class TemplateView(TemplateResponseMixin, ContextMixin, View):
