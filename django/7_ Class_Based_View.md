@@ -23,6 +23,7 @@ def post_detail(request, id):
 
 ```
 def generate_view_fn(model):
+    # generate_view_fn 함수가 호출될 때 마다 새롭게 함수가 정의되고 그것을 반환함
     def view_fn(request, id):
         instance = get_object_or_404(model, id=id)
         instance_name = model._meta.model_name
