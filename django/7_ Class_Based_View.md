@@ -131,6 +131,25 @@ class TemplateView(TemplateResponseMixin, ContextMixin, View):
 
 주소를 변경시켜주는 view
 
+* permanent (default:False)
+
+> True : 301 응답 (영구적인 이동) - 검색엔진에 영향
+> 
+> False : 302 응답 (임시 이동)
+
+* url : None 
+
+> URL 문자열
+
+* pattern_name = None
+
+> URL Reverse를 수행할 문자열
+
+* query_string = False
+
+> QueryString을 그대로 넘길 것인지 여부
+
+
 ```
 class RedirectView(View):
     """Provide a redirect on any GET request."""
