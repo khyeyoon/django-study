@@ -221,7 +221,7 @@ class RedirectView(View):
 
 1개 model의 1개 object에 대한 template 처리
 
-> model 명 소문자 이름의 Model Instance를 template에 전달
+> model 명 소문자 이름의지정 pk 또는 slug에 대응하는 Model Instance를 template에 전달
 
 부모 클래스 : SingleObjectTemplateResponseMixin, BaseDetailView
 
@@ -250,9 +250,9 @@ post_detail = PostDetailView.as_view()
 
 1개 model에 대한 List template 처리
 
-페이징 처리 지원 (한 페이지에 몇개의 Post를 볼건지 정의할 수 있음)
-
 > model 명 소문자_list 이름의 QuerySet을 template에 전달
+
+페이징 처리 지원 (한 페이지에 몇개의 Post를 볼건지 정의할 수 있음)
 
 부모 클래스 : MultipleObjectTemplateResponseMixin, BaseListView
 
