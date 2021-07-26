@@ -2,4 +2,6 @@
 
 - Repository to upload the contents of studying django
 
-![django](./img.png)
+<img src="./img.png"  width="700" height="370">
+
+
